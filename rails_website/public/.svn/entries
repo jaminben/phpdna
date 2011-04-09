@@ -1,148 +1,97 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/public
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-dispatch.cgi
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-dcdc68a6a6c68aad31d0acd93e8b02ce
-2008-06-16T15:54:25.030942Z
-204
-ben
-has-props
-
-dispatch.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-dcdc68a6a6c68aad31d0acd93e8b02ce
-2008-06-16T15:54:25.030942Z
-204
-ben
-has-props
-
-images
-dir
-
-robots.txt
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-be860f6d2760c884906a9180451d799f
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-dispatch.fcgi
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-7142645dcc0fe570f8c38a58d1e495fb
-2008-06-16T15:54:25.030942Z
-204
-ben
-has-props
-
-500.html
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-afc07b9a1221e2a75775eb0cb5a2cd0c
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-javascripts
-dir
-
-404.html
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-adc851c2e0698b5d05ef0380ed69f6b9
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-422.html
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-c6bd78379a0ad92caa6cbef7de676ce8
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-index.html
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-f30e35e8ac76c3601f00b4f397e9ca9f
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-.htaccess
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-efabcc9c4d4c5abeea2e1a17ff578c64
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-stylesheets
-dir
-
-favicon.ico
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-d41d8cd98f00b204e9800998ecf8427e
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/public"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="dispatch.cgi"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="dcdc68a6a6c68aad31d0acd93e8b02ce"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+<entry
+   committed-rev="262"
+   name="dispatch.rb"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="dcdc68a6a6c68aad31d0acd93e8b02ce"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+<entry
+   name="images"
+   kind="dir"/>
+<entry
+   committed-rev="262"
+   name="dispatch.fcgi"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="7142645dcc0fe570f8c38a58d1e495fb"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+<entry
+   committed-rev="262"
+   name="robots.txt"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="be860f6d2760c884906a9180451d799f"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="500.html"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="afc07b9a1221e2a75775eb0cb5a2cd0c"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="index.old.html"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="ca91b267009f3933b226fae705ea931b"
+   last-author="ben"
+   kind="file"/>
+<entry
+   name="javascripts"
+   kind="dir"/>
+<entry
+   committed-rev="262"
+   name="404.html"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="adc851c2e0698b5d05ef0380ed69f6b9"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="422.html"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="c6bd78379a0ad92caa6cbef7de676ce8"
+   last-author="ben"
+   kind="file"/>
+<entry
+   name="stylesheets"
+   kind="dir"/>
+<entry
+   committed-rev="262"
+   name="favicon.ico"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

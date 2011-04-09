@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/util"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="277"
+   name="test_config_flat_queries.rb"
+   text-time="2008-10-03T19:43:56.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="12872cfaeb50013ebf0ae1b1fc6fc583"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="279"
+   name="delete_sites_with_no_modules.rb"
+   text-time="2008-10-04T05:50:25.000000Z"
+   committed-date="2008-10-04T16:39:32.517387Z"
+   checksum="2a3f16149a739be1c4293e0e36ffa0d4"
+   last-author="ben"
+   kind="file"
+   revision="279"/>
+<entry
+   committed-rev="277"
+   name="populate_from_dir.rb"
+   text-time="2008-10-03T21:07:22.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="d0adae813708a779742ebdf5441a0d13"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="266"
+   name="test_parser.rb"
+   text-time="2008-09-17T17:59:38.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="1cc8464825b4fba156f62665cb5d538f"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+<entry
+   committed-rev="262"
+   name="reload_from_old_db.rb"
+   text-time="2008-09-16T21:51:37.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="2b6ca28aa6e61d1ba322f132d9049bbd"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

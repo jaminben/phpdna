@@ -15,7 +15,7 @@ require 'time'
 
 
 # NOTE: it is calling parse with the RAILS script runner
-CALL_NAME= "ruby ../rails_website/script/runner parse.rb"
+CALL_NAME= "ruby ../data_model/script/runner parse.rb"
 
 FILES_PER_PROCESS= 100
 

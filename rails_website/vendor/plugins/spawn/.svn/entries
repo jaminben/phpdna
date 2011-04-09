@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="266"
+   name=""
+   committed-date="2008-09-18T02:05:51.865563Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/vendor/plugins/spawn"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="266"/>
+<entry
+   committed-rev="266"
+   name="LICENSE"
+   text-time="2008-09-18T00:58:36.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="9b8409c716e29bee5d8212f84c7ee47c"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="266"
+   name="init.rb"
+   text-time="2008-09-18T00:58:36.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="eb7cc1f73c14a0abdf452920ab36b707"
+   last-author="ben"
+   kind="file"/>
+<entry
+   name="lib"
+   kind="dir"/>
+<entry
+   committed-rev="266"
+   name="CHANGELOG"
+   text-time="2008-09-18T00:58:35.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="79dfe3bf99da60c114a381d11cbacab9"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="266"
+   name="README"
+   text-time="2008-09-18T00:58:36.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="5fe1b11c09b02598917716243c2e5bd5"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

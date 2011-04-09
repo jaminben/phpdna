@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="204"
+   name=""
+   committed-date="2008-06-16T15:54:25.030942Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/php/data_model/public/javascripts"
+   last-author="ben"
+   kind="dir"
+   uuid="5201a03c-8392-4f5c-b0b8-8a94456bbd58"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="260"/>
+<entry
+   committed-rev="204"
+   name="prototype.js"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="02610b10c8604855e35f30a19013b9bc"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="204"
+   name="effects.js"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="4f4c0003381c7b581c1cd4e65cfb7b7a"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="204"
+   name="dragdrop.js"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="59bc3aee2cf322c08aee9364305d38df"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="204"
+   name="application.js"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="8a750594360b0bd302e15147eacadc9a"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="204"
+   name="controls.js"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="a4e3a77e069f728659c99404290d2ca9"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+</wc-entries>

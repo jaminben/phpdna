@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="246"
+   name=""
+   committed-date="2008-07-17T05:46:58.364390Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/php/data_model/config"
+   last-author="ben"
+   kind="dir"
+   uuid="5201a03c-8392-4f5c-b0b8-8a94456bbd58"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="260"/>
+<entry
+   committed-rev="204"
+   name="routes.rb"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="ad1231105071117136b47aed76d9ced3"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="245"
+   name="database.yml"
+   text-time="2008-09-01T06:14:41.000000Z"
+   committed-date="2008-07-17T05:46:00.318242Z"
+   checksum="61019210fa81d322649ddc995ead1bb4"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-01T06:14:41.000000Z"/>
+<entry
+   committed-rev="204"
+   name="boot.rb"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="62fe46fd028f9df081e4ec9eb85968c0"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   name="initializers"
+   kind="dir"/>
+<entry
+   committed-rev="245"
+   name="environment.rb"
+   text-time="2008-09-01T06:14:41.000000Z"
+   committed-date="2008-07-17T05:46:00.318242Z"
+   checksum="d3a832bb8e0e07088884987440d8fdb7"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-01T06:14:41.000000Z"/>
+<entry
+   name="environments"
+   kind="dir"/>
+</wc-entries>

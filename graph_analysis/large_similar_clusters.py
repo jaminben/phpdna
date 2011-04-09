@@ -11,16 +11,15 @@ INFILE      = "06attr"
 OUTFILE_SVG = "attr_graph_06.svg"
 OUTFILE_PNG = "attr_graph_06.png"
 
-#g = Graph.Load("output/SimpleModuleGraphALL.net")
-g = Graph.Read_Ncol(INFILE)
+g = Graph.Load("06attr.net")
+#g = Graph.Read_Ncol(INFILE)
 
-g.write("test.net", "pajek")
-
-sys.exit(0)
+#print g
 
 
-print g.is_directed()
-g.to_undirected(False)
+
+#print g.is_directed()
+#g.to_undirected(False)
 
 #g = g.to_undirected()
 #g = Graph.Load("output/SimpleModuleGraphALL.net")
@@ -59,6 +58,103 @@ sub_g = g.subgraph(g.vs.select(_degree_gt=0)).decompose(minelements=2)
 #    base = base.compose(i)
 #    base.simplify()
 
+
+
+def get_site(dbh, site):
+  c = dbh.cursor()
+  res = c.execute("select id, url from sites where id= %s", site)
+  
+  if(not res):
+    return None
+  (id, url) = c.fetchone()
+
+  # get attributes
+  #print "select `key`,val from cattributes where site_id = %s" % site
+
+  c.execute("select `key`,val from cattributes where site_id = %s", site)
+  keyvals = set()
+  q = {}
+  while(1):
+    row = c.fetchone()
+    if row == None:
+      break
+    (key, val) = row
+    kv = key + "^^" + val
+    keyvals.add(key + "^^" + val)
+    q[key] = val
+ 
+  # get modules
+  mods = set()
+  c.execute("select name from cmodules where site_id = %s", site)
+  q = {}
+  while(1):
+    row = c.fetchone()
+    if row == None:
+      break
+    (name,) = row
+    mods.add(name)
+
+  # ok to return
+  #print "KEYVALS ------------------------------------------------------------------------"
+
+  #print keyvals
+
+  return {'id': id, 'url' : url, 'mods' : mods, 'attr' : keyvals, 'kv' : q} 
+
+
+def plist(l):
+  for i in l:
+    print i
+
+def compare(dbh, site1, site2):
+  """
+    A small function to compare two sites
+    
+    I will definitely need to do more work on this.
+  """
+  s1 = get_site(dbh, site1)
+  s2 = get_site(dbh, site2)  
+
+  print s1
+  print s2
+
+def compare_group(dbh, sites):
+  """
+    Takes a list of sites, and compares them
+  
+    a & b & c == modules in common
+    a & b & c == attributes in common
+  """
+  mods = None 
+  attr = None
+ 
+  d_mods = set()
+  d_attr = set()
+  for i in sites:
+    q = get_site(dbh, i)
+   
+    #if(q and len(q['mods']) > 0 and len(q['attr']) > 0):
+    if(q and len(q['mods']) > 0 ):
+      if(mods != None):
+        mods = mods & q['mods']
+      else:
+        mods = q['mods']
+      if(attr != None):
+        attr = attr & q['attr']
+      else:
+        attr = q['attr']
+ 
+      # not in all of them. 
+      d_mods = d_mods | (q['mods'] - mods)
+      d_attr = d_attr | (q['attr'] - mods)
+    
+      #print attr
+      #print mods
+      #print "-_-_________________________"   
+  return (mods, attr, d_mods, d_attr) 
+
+
+
 c = dbh.cursor()
 
 
@@ -68,24 +164,35 @@ for i in sub_g:
   print "------------------------\n\n"
   print len(i.vs)
   print "\n"
+  if(len(i.vs) < 10):
+    continue
+  
+  ids = [v['id'] for v in i.vs] 
+  print ids
+  
+  (a1, m1, a2, m2) = compare_group(dbh, ids)  
+
+  print "____________________________________________________________________"
+  plist( a1)
+  plist(m1)
+  print "____________________________________________________________________"
+  plist( a2)
+  plist(m2)
+  print "____________________________________________________________________"
+  
   for v in i.vs:
-    print v
-    print v.index
-    #res = c.execute("select url from sites where id = %s", v['id'][1:])
-    res = c.execute("select url from sites where id = %s", v.index)
+    res = c.execute("select url from sites where id = %s", v['id'][1:])
     a = c.fetchone()
-    if(a and a[0]):
-      #print v['id'][1:] + " --> " + url
-      print str(v.index) + " --> " + str(a[0])
-  g1 = i
+
+    if( a and a[0]):
+      url = a[0]
+      print v['id'][1:] + " --> " + url
 
 c.close()
 
-print len(g1.vs)
-print len(g1.es)
 
 
-print len(g1.es)
+
 
 #l = g.layout(layout='kk')
 #l = g1.layout(layout='fruchterman_reingold', weights='weight', maxdelta=10000, maxiter=100)

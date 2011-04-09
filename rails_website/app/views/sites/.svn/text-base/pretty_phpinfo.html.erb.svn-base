@@ -1,0 +1,134 @@
+<!--
+	A prettier way to view a site.
+
+	- man an XML or JSON output would be SWEET 
+	
+-->
+<style>
+.table_1{
+	background:red;
+}
+.table_2{
+	background:blue;
+}
+.table_3{
+	background:green;	
+}
+.table_4{
+
+}
+.v_1{
+	font-size: 30px;
+}
+
+.v_2{
+	font-size: 20px;
+}
+
+.v_3{
+	font-size: 12px;
+}
+.v_4{
+	font-size: 5px;
+}
+
+.k_1{
+	font-size: 22px;
+}
+
+.k_2{
+	font-size: 18px;
+}
+
+.k_3{
+	font-size: 13px;
+}
+.k_4{
+	font-size: 10px;
+}
+
+</style>
+<%
+	def freq_to_size(freq)
+		if(freq < 0.10)
+			return "1"
+		elsif(freq < 0.50)
+			return "2"
+		elsif(freq < 0.90)
+			return "3"
+		else
+			return "4"	
+		end
+	end
+
+
+%>
+<div class="big_box yellow">
+	<h2>phpinfo() : <%=@php.site.host%></h2>
+	<a href="/phpinfo/<%=@php.id%>">http://phpinfo.us/phpinfo/<%=@php.id%></a>
+	
+
+	<h3>Most Similar Module Configurations</h3>
+	<ul class = "module_list">
+		<% @near.each do |n|%>
+		
+			<li><%=link_to n.get_edge(@php.id).site.host, :action=> :compare, :id=> @php.id, :with=> n.get_edge_id(@php.id) %> (<%=n.mods_jaccard.to_s(4)%>)</li>
+		<%end %>
+	</ul>
+	
+	<h3>Most Different Module Configurations</h3>
+	<ul class = "module_list">
+		<% @far.each do |n|%>
+			<% p n.get_edge(@php.id) %>
+			<li><%=link_to n.get_edge(@php.id).site.host, :action=> :compare, :id=> @php.id, :with=> n.get_edge_id(@php.id) %> (<%=n.mods_jaccard.to_s(4)%>)</li>
+		<%end %>
+	</ul>
+
+	<h3>Most Similar Attribute Configurations</h3>
+	<ul class = "module_list">
+		<% @near_attr.each do |n|%>
+			<li><%=link_to n.get_edge(@php.id).site.host, :action=> :compare, :id=> @php.id, :with=> n.get_edge_id(@php.id) %> (<%=n.attr_jaccard.to_s%>)</li>
+		<%end %>
+	</ul>
+	
+	<h3>Most Different Attribute Configurations</h3>
+	<ul class = "module_list">
+		<% @far_attr.each do |n|%>
+			<li><%=link_to n.get_edge(@php.id).site.host, :action=> :compare, :id=> @php.id, :with=> n.get_edge_id(@php.id) %> (<%=n.attr_jaccard.to_s%>)</li>
+		<%end %>
+	</ul>
+
+
+
+
+	<!-- now I need to make it actually work -->
+	<% cols3 = false %>
+	<%@php.pmodules.sort {|a,b| a.get_freq[:percent_mcount] <=>b.get_freq[:percent_mcount] }.each do |pm|%>
+		<h3><%=link_to pm.name, :controller => :browse, :action=>:module, :id=> pm.modname_id%> (<%=pm.get_freq[:percent_mcount] %>)</h3>
+		<% if pm.pattributes.size > 0%>
+		<table class="attr_table table_<%=freq_to_size(pm.get_freq[:percent_mcount])%>">
+			<tr class= "head" >
+				<td class="pkey">Key</td>
+				<td class="pvalue">Value</td>
+				<% if pm.pattributes && pm.pattributes.first && pm.pattributes.first.pvalue_master 
+					@cols3 =true
+				%>
+				<td class="pvalue2">Master Value</td>
+				<%end%>
+				
+			</tr>
+			<%pm.pattributes.sort { |a,b| b.key_freq(pm.modname_id)[:freq_mod] <=>a.key_freq(pm.modname_id)[:freq_mod]  }.each do |pa|%>
+				<tr>
+					<td class="pkey k_<%=freq_to_size(pa.key_freq(pm.modname_id)[:freq_mod])%>"><%=link_to pa.key, browse_key_me_url(:me=>@php.id, :id=> pa.pkey_id, :pmodule => pm.modname_id) %> (<%=pa.key_freq(pm.modname_id)[:freq_mod]%>)</td>
+					<td class="pvalue v_<%=freq_to_size(pa.val_freq(pm.modname_id)[:percent_key])%>"><%=pa.value%> (<%=pa.val_freq(pm.modname_id)[:percent_key]%>)</td>
+					<% if cols3%>
+					<td class="pvalue2 v_<%=freq_to_size(pa.val_freq(pm.modname_id)[:percent_key])%>"><%=pa.master_value == "" ? pa.value : pa.master_value%></td>					
+					<% end %>
+				</tr>
+			<%end%>
+		</table>
+		<%end%>
+	<%end%>
+</div>
+
+<!-- later everything can have a link, that links to some sort of crazy viewing stuff -->

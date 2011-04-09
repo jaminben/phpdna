@@ -1,76 +1,53 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/public/javascripts
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-prototype.js
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-02610b10c8604855e35f30a19013b9bc
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-effects.js
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-4f4c0003381c7b581c1cd4e65cfb7b7a
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-dragdrop.js
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-59bc3aee2cf322c08aee9364305d38df
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-controls.js
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-a4e3a77e069f728659c99404290d2ca9
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-application.js
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-8a750594360b0bd302e15147eacadc9a
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/public/javascripts"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="prototype.js"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="02610b10c8604855e35f30a19013b9bc"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="effects.js"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="cebc1eedee1228b27369e13bb661b3b8"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="dragdrop.js"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="357454fa89ca04dbbaf34cb38e694851"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="application.js"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="8a750594360b0bd302e15147eacadc9a"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="controls.js"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="90f3fa79fb31046ee45866d768e36fd6"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

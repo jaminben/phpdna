@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="272"
+   name=""
+   committed-date="2008-09-28T04:10:13.621721Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/app/views/browse"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="272"/>
+<entry
+   committed-rev="285"
+   name="module.html.erb"
+   text-time="2008-10-04T18:44:14.000000Z"
+   committed-date="2008-10-04T18:39:57.954788Z"
+   checksum="83d4968bf32e37ef35dfc9dbb565d551"
+   last-author="ben"
+   kind="file"
+   revision="285"/>
+<entry
+   committed-rev="286"
+   name="key.html.erb"
+   text-time="2008-10-04T20:05:19.000000Z"
+   committed-date="2008-10-04T20:00:15.915489Z"
+   checksum="d4d3007c132178b9067c376649bf57cb"
+   last-author="ben"
+   kind="file"
+   revision="286"/>
+<entry
+   name="key.rhtml.erb"
+   kind="file"
+   deleted="true"
+   revision="273"/>
+<entry
+   committed-rev="286"
+   name="value.html.erb"
+   text-time="2008-10-04T19:52:52.000000Z"
+   committed-date="2008-10-04T20:00:15.915489Z"
+   checksum="66b137421dde78f7f00fc9dc7e6b4012"
+   last-author="ben"
+   kind="file"
+   revision="286"/>
+</wc-entries>

@@ -1,0 +1,70 @@
+Todo:
+
+* Style the pages.
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------
+* Re-run compare
+
+
+* start using the built in caching functions, and use some method to generate all the pages
+* from the cache :-)
+* 
+
+* 
+
+  * Figure out how to use "route" to make nice URLs for the other pieces
+  * add route so we can cache the compare function
+Revisit Co-Occuring in same module
+  * Cleanup utils.. cleanup sites with no modules (probably uneeded)
+  *   * Show keys on the Module Browse Page, in a similar way to how values are shown.
+Ok,
+  Now that I've fixed frequency.. Or so I think.
+
+1) A test to make sure the numbers match up for all 3 of the ways  CHECK
+   of generating numbers :-)  (i.e. in pconfig_flat)
+
+
+2) Redo the compare functions to work with the sets of integers (instead of the old way) [DONE]
+
+3) Redo the Co-Occurance stuff to work with new frequency. [DONE]
+
+4) Graphical Filter.. i.e. a way to highlight uncommon items.
+tatic
+
+
+
+
+---------------------------------------------------------------------------------------------
+I think I am ready to build out the web interface.
+
+I also need to do things like calculate "raw similarity"
+
+and stuff.
+
+i.e. build out the comparison functions more.
+
+compare groups of PHP info files.
+
+
+---------------------
+Web interface is pretty good.
+
+* need something to delete sites that have no modules.
+
+* need something while creating sites to "delete that site"
+
+
+----------------------------------------------------------------------------
+Redo lada similarity calculations.
+
+think about how different filters, could make less data available.
+
+-- show both people's key/value pairs for each module. -- in the comparison function.
+

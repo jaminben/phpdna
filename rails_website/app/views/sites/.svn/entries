@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/app/views/sites"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="edit.html.erb"
+   text-time="2008-09-16T14:26:36.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="836088fcc85b5046634998ba7a61444a"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="286"
+   name="compare.html.erb"
+   text-time="2008-10-04T20:07:53.000000Z"
+   committed-date="2008-10-04T20:00:15.915489Z"
+   checksum="a2537efabcd7af8f92b61fddc876f10c"
+   last-author="ben"
+   kind="file"
+   revision="286"/>
+<entry
+   committed-rev="279"
+   name="index.html.erb"
+   text-time="2008-10-04T05:50:38.000000Z"
+   committed-date="2008-10-04T16:39:32.517387Z"
+   checksum="8cba7d91af4dfac338feaab6713c474c"
+   last-author="ben"
+   kind="file"
+   revision="279"/>
+<entry
+   committed-rev="262"
+   name="new.html.erb"
+   text-time="2008-09-16T14:26:36.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="8cbbddb4c86ad30867612466d1d39525"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="288"
+   name="pretty_phpinfo.html.erb"
+   text-time="2008-10-04T20:56:13.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="8b463f33659d399bc520f1b2b1896c86"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="262"
+   name="show.html.erb"
+   text-time="2008-09-16T14:26:36.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="54601105a85187ce7d85e557f86e55a4"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="271"
+   name="view_key.html.erb"
+   text-time="2008-09-27T04:26:43.000000Z"
+   committed-date="2008-09-27T04:32:38.176466Z"
+   checksum="2766a884fe7d37d5dad91b984b77cb84"
+   last-author="ben"
+   kind="file"
+   revision="271"/>
+<entry
+   committed-rev="286"
+   name="phpinfo.html.erb"
+   text-time="2008-10-04T19:35:27.000000Z"
+   committed-date="2008-10-04T20:00:15.915489Z"
+   checksum="422e3c2e0c7ca53e89484fca9601d1ff"
+   last-author="ben"
+   kind="file"
+   revision="286"/>
+</wc-entries>

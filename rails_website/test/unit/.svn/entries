@@ -1,64 +1,87 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/test/unit
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-attribute_test.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-6d781f4d4ac6f5977a7c407015841b5a
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-edge_test.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-1add739aaf5249fafa948c869685fe01
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-site_test.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-95d70ed4bc52422e19a3834c92dc6c7e
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-cmodule_test.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-e76f15d4d9adbf127e64b326abecf717
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/test/unit"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="modname_test.rb"
+   text-time="2008-09-16T14:35:21.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="7b6ddb5c7e7cc951c1150995f59bcde6"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="pattribute_test.rb"
+   text-time="2008-09-16T14:28:24.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="74a388819d6ce5997930c10e46290deb"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="phpinfo_test.rb"
+   text-time="2008-09-16T14:27:44.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="89d74f771f7b16b86d817da5fc82ca8d"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="site_test.rb"
+   text-time="2008-09-16T14:26:36.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="d97c11c68f7eaa259d7e3b91c9ee8ef3"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="pmodule_test.rb"
+   text-time="2008-09-16T14:28:10.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="dcdbf752a861589811dafeb6db72e953"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="pkey_test.rb"
+   text-time="2008-09-16T14:28:42.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="831933446fba73ef80cbccc3108c5abe"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="266"
+   name="compare_cache_test.rb"
+   text-time="2008-09-17T18:36:05.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="ce8a7e39d4bcb427b3e945ec324ef662"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+<entry
+   committed-rev="266"
+   name="compare_edge_test.rb"
+   text-time="2008-09-17T18:36:15.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="ff4a9270315d69e97392a25931d7572d"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+<entry
+   committed-rev="262"
+   name="pvalue_test.rb"
+   text-time="2008-09-16T14:28:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="51ed3f905fbd8d2e2f3f0e243dc0597a"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

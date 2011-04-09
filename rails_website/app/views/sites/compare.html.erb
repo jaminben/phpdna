@@ -1,0 +1,157 @@
+
+<!--
+    return {
+            :mods_incommon    => mods_incommon, 
+            :mods_diff        => mods_diff,
+            :mods_diff_a      => mods_diff & php1.modules_as_set,
+            :mods_diff_b      => mods_diff & php2.modules_as_set,
+
+            :mods_jaccard     => mods_jaccard ,
+            #:attrs_incommon   => attrs_incommon,
+            #:attrs_diff       => attrs_diff,
+            #:attrs_diff_a     => attrs_diff & a1,
+            #:attrs_diff_b     => attrs_diff & a2,
+            :attrs_jaccard    => attrs_jaccard,
+            
+            :keys_diff     => keys_diff,
+            :keys_incommon => keys_incommon,
+            
+            :mods_lada  => mods_lada,
+            :keys_lada  => keys_lada,
+            :attrs_lada => attrs_lada,
+            
+      }	
+	+
+-->
+<style>
+.both { font-weight: bold; background:#bbddff;}
+</style>
+
+<div class="bigger_box yellow">
+	<h2>phpinfo(): Compare <a href="/phpinfo/<%=@php1.id%>"><%=@php1.site.host%></a> to <a href="/phpinfo/<%=@php2.id%>"><%=@php2.site.host%></a></h2>
+
+	<h3>Similarity Statistics</h3>
+	<ul>
+		<li>Modules Jaccard Similarity: <%=@compare[:mods_jaccard]%></li>
+		<li>Attributes Jaccard Similarity: <%=@compare[:attrs_jaccard]%></li>
+		<li>Attributes Lada Uniqueness: <%=@compare[:attrs_lada]%></li>
+		<li>Modules Lada Uniqueness: <%=@compare[:mods_lada]%></li>
+		<li>Module Keys Lada Uniqueness: <%=@compare[:keys_lada]%></li>
+	</ul>
+	
+	<h3>Modules in Common (<%=@compare[:mods_incommon].size%>)</h3>
+		<ul>
+			<%@compare[:mods_incommon].each do |inc|%>
+				<% mod = @php1.get_from_str(inc) %>
+				<li><%=link_to mod.name, :controller => :browse, :action=>:module, :id=> inc%> (<%=mod.get_freq[:percent_mcount]%>)</li> <!-- show frequency of module here -->
+			<%end%>
+		</ul>
+	
+	<h3>Modules only  in <a href="/phpinfo/<%=@php1.id%>"><%=@php1.site.host%></a> (<%=@compare[:mods_diff_a].size%>)</h3>
+		<ul>
+			<%@compare[:mods_diff_a].each do |inc|%>
+			<% mod = @php1.get_from_str(inc) %>
+			<li><%=link_to mod.name, :controller => :browse, :action=>:module, :id=> inc%> (<%=mod.get_freq[:percent_mcount]%>)</li> <!-- show frequency of module here -->
+			<%end%>
+		</ul>
+	
+	<h3>Modules only in <a href="/phpinfo/<%=@php2.id%>"><%=@php2.site.host%></a>  (<%=@compare[:mods_diff_b].size%>)</h3>
+		<ul>
+			<%@compare[:mods_diff_b].each do |inc|%>
+			<% mod = @php2.get_from_str(inc)
+			 	p inc
+				p mod
+			%>
+			<li><%=link_to mod.name, :controller => :browse, :action=>:module, :id=> inc%> (<%=mod.get_freq[:percent_mcount]%>)</li> <!-- show frequency of module here -->
+			<%end%>
+		</ul>
+
+	<!-- Ok, now show Attributes in common -->
+	<h3>Attributes in Common  (<%=@compare[:attrs_incommon].size%>)</h3>
+	<h3>Attributes Different  (<%=@compare[:attrs_diff].size%>)</h3>
+	<!--
+		<ul>
+			<> #%@compare[:attrs_incommon].each do |inc|%>
+				<li><% #=inc%> </li> 
+			<% #end%>
+		</ul>
+	-->
+	
+	<h3>Showing Attributes for Modules in Common</h3>
+	
+	<% cols3 = false %>
+	<%@php1.pmodules.sort {|a,b| a.name <=>b.name }.each do |pm|%>
+		<%  
+			next unless(@compare[:mods_incommon].include? pm.modname_id) 
+		%>
+		
+		<h3><%=link_to pm.name, :controller => :browse, :action=>:module, :id=> pm.modname_id%> (<%=pm.get_freq[:percent_mcount] %>)</h3>
+		<% if pm.pattributes.size > 0%>
+		<table class="attr_table">
+			<tr class= "head" >
+				<td class="pkey">Key</td>
+				<td class="pvalue">Value <a href="/phpinfo/<%=@php1.id%>"><%=@php1.site.host%></a></td>
+				<td class="pvalue_2">Value <a href="/phpinfo/<%=@php2.id%>"><%=@php2.site.host%></a></td>
+			</tr>
+
+			<% pm.pattributes.sort { |a,b| b.key_freq(pm.modname_id)[:freq_mod] <=>a.key_freq(pm.modname_id)[:freq_mod]  }.each do |pa|%>
+				<% if(@compare[:attrs_incommon].include? pa.for_set(pm.modname_id) ) %>
+				<tr class="both">
+				<% else %>
+				<tr>
+				<% end %>
+					<%	#p pm.modname_id
+						#p pa.key
+						#p @afreq[pm.modname_id.to_s][pa.key]
+					%>
+					<td class="pkey"><%=link_to pa.key, :controller => :browse, :action=>:key, :me=>@php1.id, :with=>@php2.id, :id=> pa.pkey_id, :pmodule => pm.modname_id%> (<%=pa.key_freq(pm.modname_id)[:freq_mod]%>)</td>
+		
+					<td class="pvalue"><%=pa.value%> (<%=pa.val_freq(pm.modname_id)[:percent_key]%>)</td>
+					<td class="pvalue2"><%
+						ret = @php2.get_attr(pm.modname_id, pa.pkey_id)
+						if(ret != "" && ret)
+						%> <%=ret.value%> (<%=ret.val_freq(pm.modname_id)[:percent_key]%>)
+						<%
+						end
+						%>
+						
+					 </td>					
+				</tr>
+			<%end%>
+			<%
+				@compare[:real_keys_diff_b].each do |st|
+					#p st
+					pa = @php2.get_from_str(st)
+					#p pa
+					(mod, rest) = st.split("|",2)
+					mod = mod.to_i
+					
+					next if pm.modname_id != mod
+				%>
+				<tr>
+				<td class="pkey"><%=link_to pa.key, browse_key_me_with_url(:me=>@php1.id, :with=>@php2.id, :id=> pa.pkey_id, :pmodule => pm.modname_id)%> (<%=pa.key_freq(mod)[:freq_mod]%>)</td>
+				<td class="pvalue"></td>
+				<td class="pvalue2"><%=pa.value%> (<%=pa.val_freq(mod)[:percent_key]%>)</td>
+				</tr>
+				<%	
+				
+				end	
+			%>
+			<% 
+				# I need to keep track of keys that I never show that are only in one of them.
+				# :keys_diff_b
+			
+			%>
+
+		</table>
+		<%end%>
+	<%end%>
+
+
+	<%
+		# I also need to loop through the modules that are only in B
+		# :mods_diff_b
+	%>
+
+
+</div>

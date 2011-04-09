@@ -8,22 +8,24 @@
 
 import sys
 
-nodes =set() 
+max = 0
 
 for i in open(sys.argv[1]):
   p = i.split(" ")
   if(len(p)>2):
-    nodes.add(p[0])
-    nodes.add( p[1])
-
+    if( int(p[0]) > max):
+      max = int(p[0])
+    if(int(p[1]) > max):
+      max = int(p[1])
+        
 # print out the nodes:
-print "*Vertices %s" %(len(nodes))
+print "*Vertices %s" %(max)
 j =0 
-for i in nodes:
+for i in xrange(1,max):
   j += 1
-  print  """%s "n%s" 0.0 0.0 0.0""" % (j, j )
+  print  """%s "%s" 0.0 0.0 0.0""" % (j, j )
 
 # now loop through 
-print "*Arcs"
+print "*Edges"
 for i in open(sys.argv[1]):
   sys.stdout.write( i)  

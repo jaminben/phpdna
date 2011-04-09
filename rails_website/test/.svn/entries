@@ -1,43 +1,33 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/test
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-unit
-dir
-
-test_helper.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-30478106e9df8977e79fc045df799e29
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-functional
-dir
-
-integration
-dir
-
-fixtures
-dir
-
-mocks
-dir
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/test"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   name="unit"
+   kind="dir"/>
+<entry
+   committed-rev="262"
+   name="test_helper.rb"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="30478106e9df8977e79fc045df799e29"
+   last-author="ben"
+   kind="file"/>
+<entry
+   name="functional"
+   kind="dir"/>
+<entry
+   name="integration"
+   kind="dir"/>
+<entry
+   name="fixtures"
+   kind="dir"/>
+</wc-entries>

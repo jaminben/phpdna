@@ -1,56 +1,34 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/db
-file:///var/svn
-
-
-
-2008-07-18T05:26:43.897891Z
-249
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-5201a03c-8392-4f5c-b0b8-8a94456bbd58
-
-schema.rb
-file
-
-
-
-
-2008-08-27T22:27:01.000000Z
-7280e011371c29181b385509c86e37df
-2008-07-18T05:26:43.897891Z
-249
-ben
-
-development.sqlite3
-file
-
-
-
-
-2008-07-17T05:47:21.000000Z
-6041318ffc22db9c43b824e8187c3626
-2008-07-17T05:46:00.318242Z
-245
-ben
-has-props
-
-migrate
-dir
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/db"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="288"
+   name="schema.rb"
+   text-time="2008-10-04T20:13:45.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="b5e580b2ce14e15a69569648902e5256"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="262"
+   name="development.sqlite3"
+   text-time="2008-09-16T21:03:49.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="fddab2b545622d83047868ef0e4fa954"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+<entry
+   name="migrate"
+   kind="dir"/>
+</wc-entries>

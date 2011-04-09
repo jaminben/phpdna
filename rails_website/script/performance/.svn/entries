@@ -1,55 +1,40 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/script/performance
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-benchmarker
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-91086af38733556c5aabc91eb4b20bed
-2008-06-16T15:54:25.030942Z
-204
-ben
-has-props
-
-profiler
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-4dd7faa9b0b5f678082e19c97852b005
-2008-06-16T15:54:25.030942Z
-204
-ben
-has-props
-
-request
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-9316140f20aace6cf628d17b5bfd1119
-2008-06-16T15:54:25.030942Z
-204
-ben
-has-props
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/script/performance"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="benchmarker"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="91086af38733556c5aabc91eb4b20bed"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+<entry
+   committed-rev="262"
+   name="profiler"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="4dd7faa9b0b5f678082e19c97852b005"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+<entry
+   committed-rev="262"
+   name="request"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="9316140f20aace6cf628d17b5bfd1119"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-09-17T06:49:06.000000Z"/>
+</wc-entries>

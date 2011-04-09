@@ -1,0 +1,68 @@
+
+
+<script>
+	function status(msg) {
+		var a = document.getElementById("status")
+		a.innerHTML = msg;
+	}
+</script>
+<div class="box yellow">
+<div id="form">
+<!--
+	I should make it a timer, and have a status
+-->
+<% remote_form_for(:example,
+                   :url => { :action => 'add' }, :update => 'status',
+				   :loading => 'status("Saving and Analyzing...<blink.</blink>")'
+                   
+					) do |form| %>
+				<b>Enter the URL to your phpinfo() page.</b><br/>
+					<i>i.e. https://secure18.easycgi.com/phpinfo.php</i>
+				<%= text_field_tag "url", "http://", :id => "url_box" %>
+				<%= submit_tag "Load", :id => "submit" %>
+	
+<% end -%>
+</div>
+<div id="status"></div>
+
+</div>
+
+<div class="box">
+<p>The PHP DNA project is an attempt to collect and analyze the output from a large number of phpinfo() pages from around the world.
+We have currently indexed <b><%=@stats_total%></b> phpinfo() pages, and have a library of <b><%=@stats_mods%></b> modules and 
+<b><%=@stats_attributes_key%></b> attribute keys with <b><%=@stats_attributes_val%></b> unique values.
+</p>
+
+
+<p>The PHP DNA project is made possible by the generous support of the <a href="http://si.umich.edu" target="_blank">University of Michigan School of Information</a>
+
+</p>
+</div>
+
+
+<div class="box">
+<h3>Recent Additions</h3>
+<ul>
+<% @recent.each do |r| %>
+	<%
+	#p r.site
+	#p r.id
+	%>
+	<li><a href="/phpinfo/<%=r.id%>"><%=r.site.host%></a></li>
+<% end %>
+</ul>
+
+</div>
+<!--
+	
+	Add the list of recent editions... and call it good for a while.
+	
+	 need to add something else that lists recent additions 
+	
+	and other interesting things.
+	
+-->
+
+
+
+

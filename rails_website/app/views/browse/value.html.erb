@@ -1,0 +1,86 @@
+<!--
+	@sites = Phpinfo.find_by_sql("select p.* from 
+                                    phpinfos p join pmodules pm on pm.phpinfo_id = p.id
+                                    join pattributes pa on pa.pmodule_id = pm.id
+                                    where 
+                                        pa.pmodule_id = #{params[:pmodule].to_i} and
+                                        pa.pvalue_id = #{params[:id].to_i} and
+                                        pa.pkey_id   = #{params[:key].to_i}
+                                    ")
+    @pmodule = Pmodule.find_by_id params[:pmodule]
+    @value   = Pvalue.find_by_id params[:id]
+    @key     = Pvalue.find_by_id params[:key]
+
+    row['pkey'],
+    row['pvalue'],       
+    row['modname_id'],
+    row['pkey_id'],
+    row['pvalue_id'],                 
+    row['count'] ,
+    FreqMan.get_key_val( row['modname_id'] , row['pkey_id'], row['pvalue_id'])[:percent_key]
+
+-->
+
+<h1><%=link_to @pmodule.name, :controller => :browse, :action=>:module, :id=> @pmodule.modname_id%> - <%=link_to @key.pkey, :controller => :browse, :action=>:key, :id=> @key.id, :pmodule => @pmodule.modname_id%>:<%=@value.pvalue%></h1>
+
+<%
+def compare (a, b)
+	return -1 if a[0].class == Symbol
+	return 1  if b[0].class == Symbol
+	return b[1][:percent_key] <=> a[1][:percent_key] 
+end
+
+%>
+
+<h2>Other Values</h2>
+<% FreqMan.db[@pattr.pmodule.modname_id][@pattr.pkey_id].sort{|a,b| compare(a,b)  }.each do |r|
+	(k,v) = r
+	 
+	next if (k.class == Symbol)
+	_class = ""
+	val = k
+	pv = Pvalue.find_by_id(val)
+	
+	#val ||= "(empty)"
+	
+
+%>
+			<div <%= (k == params[:id].to_i ? "class='same'" : "") %>>
+			(<%="%.2f" % v[:percent_key]%>) <%=link_to pv.pvalue, browse_value_url(:key=> params[:key], :pmodule => params[:pmodule], :id=> k) %> 
+			</div>
+	<%
+		end			
+	%>
+
+
+
+<!--
+	[ row['pkey'], row['pvalue'], row['pkey_id'], row['value_id'], row['count'].to_i, row['modname_id'] ]
+	[ row['pkey'], row['pvalue'], row['pkey_id'], row['value_id'], row['count'].to_i, row['modname_id'] ]
+	-->
+
+
+<h2>Co-Occuring Keys/Values in same module - <%=link_to @pmodule.name, :controller => :browse, :action=>:module, :id=> @pmodule.modname_id%></h2>
+<ul>
+<% @co_mod.each do |row|%>
+	<% p row %>
+	<li><%=link_to (row[0] + ":" + (row[1] || "(empty)") ), browse_value_url(:id=> row[4], :key => row[3], :pmodule => row[2]) %> (<%="%.2f" % row[5]%>) [<%=row[6]%>]</li>
+<%end%>
+</ul>
+
+<h2>All Co-Occuring Keys/Values</h2>
+<ul>
+<% @co.each do |row|%>
+	<% p row %>
+	<li><%=link_to (row[0] + ":" + (row[1] || "(empty)") ), browse_value_url(:id=> row[4], :key => row[3], :pmodule => row[2]) %> (<%="%.2f" % row[5]%>) [<%=row[6]%>]</li>	
+<%end%>
+</ul>
+
+
+
+<h2>Sites</h2>
+<ul>
+<% @sites.each do |s|%>
+	<li><a href="/phpinfo/<%=s.id%>"><%=s.site.host%></a></li>
+<%end %>
+</ul>

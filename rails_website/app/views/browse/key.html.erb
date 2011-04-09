@@ -1,0 +1,121 @@
+<!--
+	We view a distribution of a key.
+	[row['count'], row['pmodule'], row['pkey'], row['pvalue'] ]
+	
+	           row['pkey'],
+         row['pkey_id'],
+         row['modname_id'],
+         row['count'] ,
+         FreqMan.get_key( row['modname_id'].to_i , row['pkey_id'].to_i)[:freq_mod]
+
+-->
+<style>
+.both {
+	background:pink;
+	font-weight: bold;
+}
+.me {
+	background:cyan;
+	font-weight: bold;
+}
+.you {
+	background:yellow;
+	font-weight: bold;
+		
+}
+</style>
+<h1><%=link_to @pattr.pmodule.name, :action=>:module, :id=> @pattr.pmodule.modname_id %> : <%=@pattr.key %> (<%=FreqMan.db[@pattr.pmodule.modname_id][@pattr.pkey_id].size%>)</h1>
+
+<h2>Values</h2>
+<% 
+	#(@attr, @total)
+
+	p1val = nil
+	p2val = nil
+	if(@php1)
+		
+		p1val = @php1.get_attr(@pattr.pmodule.modname_id, @pattr.pkey_id)
+		p1val = p1val.pvalue_id if(p1val)
+		#print p1val
+	end
+	
+	
+	if(@php2)
+		p2val = @php2.get_attr(@pattr.pmodule.modname_id, @pattr.pkey_id)
+		p2val = p2val.pvalue_id if(p2val)
+	end
+	
+	
+	def compare (a, b)
+		return -1 if a[0].class == Symbol
+		return 1  if b[0].class == Symbol
+		return b[1][:percent_key] <=> a[1][:percent_key] 
+	end
+%>
+	
+	
+<% FreqMan.db[@pattr.pmodule.modname_id][@pattr.pkey_id].sort{|a,b| compare(a,b)  }.each do |r|
+	(k,v) = r
+	 
+	next if (k.class == Symbol)
+	_class = ""
+	val = k
+	pv = Pvalue.find_by_id(val)
+	p "-------------------------------------------------------"
+	p pv
+	p p1val
+	p p2val
+	p val
+	p "-------------------------------------------------------"
+	
+	if(p1val == val and p2val == val)
+		_class = "both"
+	elsif(p1val == val and val)
+		_class = "me"
+	elsif(p2val == val and val)
+		_class = "you"
+	end
+	
+	#val ||= "(empty)"
+	
+
+%>
+			<div class="<%=_class%> ">
+			(<%="%.2f" % v[:percent_key]%>) <%=link_to pv.pvalue, browse_value_url(:key=> params[:id], :pmodule => params[:pmodule], :id=> k) %> 
+
+			<%
+			if(p1val == val and val)
+			%>
+				(<%=link_to @php1.site.host, :id=>@php1.id, :controller => :sites, :action => :phpinfo %>)
+			<%	
+			end
+			if(p2val == val and val)
+			%>
+				(<%=link_to @php2.site.host, :id=>@php2.id, :controller => :sites, :action => :phpinfo %>)
+			<%	
+			end
+			%>
+			<br /> 
+			</div>
+	<%
+		end			
+	%>
+
+
+<h2>Co-Occuring Keys in same module (<%=@pattr.pmodule.name%>)</h2>
+<ul>
+<% @co_mod.each do |row|%>
+	<li><%=link_to row[0], browse_key_url(:id=> row[1], :pmodule => row[2]) %> (<%=row[3]%>) [<%=row[4]%>]</li>	
+<%end%>
+</ul>
+
+<h2>All Co-Occuring Keys</h2>
+<ul>
+<% @co.each do |row|%>
+	<li><%=link_to row[0],  browse_key_url(:id=> row[1], :pmodule => row[2]) %> (<%=row[3]%>) [<%=row[4]%>]</li>	
+<%end%>
+</ul>
+
+
+
+

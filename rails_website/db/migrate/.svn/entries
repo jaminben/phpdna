@@ -1,136 +1,123 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/db/migrate
-file:///var/svn
-
-
-
-2008-07-18T05:26:43.897891Z
-249
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-5201a03c-8392-4f5c-b0b8-8a94456bbd58
-
-004_create_edges.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-a7409d1873fdc9af92f7b06686aff9be
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-006_create_smedges.rb
-file
-
-
-
-
-2008-06-25T02:08:13.000000Z
-656eaf3064156388bd7c2471053c9f19
-2008-06-25T02:08:23.829177Z
-226
-root
-
-011_add_mysam.rb
-file
-
-
-
-
-2008-08-27T22:24:31.000000Z
-8d5c79eed8e1a306db3a3d38979c02a6
-2008-07-18T05:26:43.897891Z
-249
-ben
-
-003_create_cmodules.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-ec2c9c4694f9231d3ba8300f13e153a2
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-009_add_index_to_sedges.rb
-file
-
-
-
-
-2008-06-25T22:49:53.000000Z
-5341e7082dd6bffe4f38713bc36c713b
-2008-06-26T02:58:14.238276Z
-230
-ben
-
-010_create_attr_edges.rb
-file
-
-
-
-
-2008-07-17T05:47:21.000000Z
-2da4a1b79515f36f7cac33fe278a265d
-2008-07-17T05:31:17.097894Z
-244
-ben
-
-008_add_module_count_to_sites.rb
-file
-
-
-
-
-2008-06-25T02:44:07.000000Z
-118feea111d3b03303fcd3150ab469f1
-2008-06-25T02:44:17.616370Z
-227
-root
-
-001_create_attributes.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-8d7037f6680deee6f95ea82b67934ebe
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-002_create_sites.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-f5c13b81c61f0fa850f8edcc5e59b6a4
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/db/migrate"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="278"
+   name="20081002192102_migrate_phpinfo_to_pconfig.rb"
+   text-time="2008-10-02T19:29:00.000000Z"
+   committed-date="2008-10-04T05:13:10.713143Z"
+   checksum="05faa0292cc2050cd4e291011ca9eaa9"
+   last-author="ben"
+   kind="file"
+   revision="278"/>
+<entry
+   committed-rev="262"
+   name="20080916143521_create_modnames.rb"
+   text-time="2008-09-16T21:03:25.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="f93cc48631cd614a3afb521e4404df91"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="266"
+   name="20080917183605_create_compare_caches.rb"
+   text-time="2008-09-17T18:43:44.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="be506cafebd5cc1eb193bc04c18d33ef"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+<entry
+   committed-rev="266"
+   name="20080917183615_create_compare_edges.rb"
+   text-time="2008-09-17T19:17:20.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="7097fe00af6db6bfe5626f8b9c4b1b6e"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+<entry
+   committed-rev="262"
+   name="20080916142810_create_pmodules.rb"
+   text-time="2008-09-16T20:54:40.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="b7dd7026676266912af213754cf845c0"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="20080916142848_create_pvalues.rb"
+   text-time="2008-09-16T21:07:24.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="4662cfdd6970e7f22d61f0e25fe8a6b8"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="20080916142824_create_pattributes.rb"
+   text-time="2008-09-17T02:19:19.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="c13dd50b1241e603a1815a4f0a1d0d9e"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="20080916142744_create_phpinfos.rb"
+   text-time="2008-09-16T21:38:49.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="2c13463b8c99ad1f2a295ba8dd3f4157"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="20080916142636_create_sites.rb"
+   text-time="2008-09-16T20:55:32.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="dec6c787ab89be58930ffd68f7408003"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="277"
+   name="20081003190718_add_view.rb"
+   text-time="2008-10-03T19:08:08.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="df546644850aba5d96029f2d10c24cf1"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="288"
+   name="20081004201034_add_current_to_pconfig.rb"
+   text-time="2008-10-04T20:13:36.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="f5426a067113b841c3ff7b34ef3841e5"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="267"
+   name="20080918022959_add_host.rb"
+   text-time="2008-09-18T02:32:44.000000Z"
+   committed-date="2008-09-18T02:29:05.985147Z"
+   checksum="e8a03f6c48ccf445cd9d0a3eb21c10f7"
+   last-author="ben"
+   kind="file"
+   revision="267"/>
+<entry
+   committed-rev="262"
+   name="20080916142842_create_pkeys.rb"
+   text-time="2008-09-16T20:56:13.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="09dc498366ff712487ab6af8d7847e5f"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

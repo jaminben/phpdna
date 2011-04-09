@@ -1,0 +1,58 @@
+
+<% 
+	#(@attr, @total)
+
+	p1val = nil
+	p2val = nil
+	if(@php1)
+		print @attr.first[1], @attr.first[2]
+		p1val = @php1.get_attr(@attr.first[1], @attr.first[2])
+		p1val = p1val.value if(p1val)
+		print p1val
+	end
+	
+	
+	if(@php2)
+		p2val = @php2.get_attr(@attr.first[1], @attr.first[2])
+		p2val = p2val.value if(p2val)
+	end
+	
+%>
+<h2>Values</h2>
+<%
+	@attr.each do |count, mod, key, val, vid|
+		count /= @total
+		_class = ""
+		
+	
+		if(p1val == val and p2val == val)
+			_class = "both"
+		elsif(p1val == val and val)
+			_class = "me"
+		elsif(p2val == val and val)
+			_class = "you"
+		end
+		
+		val ||= "(empty)"
+		
+		%>
+		<div class="<%=_class%>">
+		(<%="%.2f" % count%>) <%=link_to val, :action=>:value,  :key=> params[:id], :pmodule => params[:pmodule], :id=> vid %> 
+		
+		<%
+		if(p1val == val and val)
+		%>
+			(<%=link_to @php1.site.host, :id=>@php1.id, :controller => :sites, :action => :phpinfo %>)
+		<%	
+		end
+		if(p2val == val and val)
+		%>
+			(<%=link_to @php2.site.host, :id=>@php2.id, :controller => :sites, :action => :phpinfo %>)
+		<%	
+		end
+		%>
+		<br /> 
+		</div>
+<%
+	end			
+%>

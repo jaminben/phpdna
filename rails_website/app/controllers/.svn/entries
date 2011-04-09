@@ -1,28 +1,39 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/app/controllers
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-application.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-7b3ec5994d206a0e53adc3fd4ce50135
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/app/controllers"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="application.rb"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="31f2009a7da1941c71567cbae0096e11"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="288"
+   name="browse_controller.rb"
+   text-time="2008-10-04T20:26:58.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="1fc76b0d43cc2c59ccbc3ccf6e570715"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="288"
+   name="sites_controller.rb"
+   text-time="2008-10-04T20:39:39.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="4a1abc7f26317a4b1bfc27647d7e7c77"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+</wc-entries>

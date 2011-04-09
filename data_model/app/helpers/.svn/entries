@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="204"
+   name=""
+   committed-date="2008-06-16T15:54:25.030942Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/php/data_model/app/helpers"
+   last-author="ben"
+   kind="dir"
+   uuid="5201a03c-8392-4f5c-b0b8-8a94456bbd58"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="260"/>
+<entry
+   committed-rev="204"
+   name="application_helper.rb"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="3a1f28b1e560cf597cd3f2a9afade628"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+</wc-entries>

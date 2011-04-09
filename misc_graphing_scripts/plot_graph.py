@@ -3,9 +3,9 @@ import igraph
 from igraph import Graph
 print igraph
 
-INFILE      = "output/small_jacc_90.net" 
-OUTFILE_SVG = "out_jax_smaller_90.svg"
-OUTFILE_PNG = "out_jac_90.png"
+INFILE      = "output/small_jacc_70.net" 
+OUTFILE_SVG = "out_jax_smaller_98.svg"
+OUTFILE_PNG = "out_jac_98.png"
 
 #g = Graph.Load("output/SimpleModuleGraphALL.net")
 g = Graph.Load(INFILE)
@@ -15,16 +15,17 @@ g = Graph.Load(INFILE)
 #print g.es["weight"]
 #print g.cliques()
 
+to_del = []
 # delete edges that have low weight
-#for e in g.es:
+for e in g.es:
 #  print e
-#  if(e['weight'] < 0.85):
-#    g.delete_edges(e)
+  if(e['weight'] < 0.98):
+    to_del.append(e.index)
 
 
 #simple test:
 #print g.vs[1]
-#g = g.delete_vertices(g.vs[1])
+g = g.delete_edges(to_del)
 #print g.vs[1]
 
 #v =  g.vs[1]
@@ -70,7 +71,7 @@ print len(g1.vs)
 #    print i
 
 #l = g.layout(layout='kk')
-l = g1.layout(layout='fruchterman_reingold', weights='weight', maxdelta=10000, maxiter=500)
+l = g1.layout(layout='fruchterman_reingold', weights='weight', maxdelta=10000, maxiter=1000)
 g1.write_svg(OUTFILE_SVG, l, width=2048, height = 2048, vertex_size=5, font_size=12, labels='id' )
 os.system("rsvg-convert %s -o %s" %(OUTFILE_SVG, OUTFILE_PNG))
 os.system("open %s" % (OUTFILE_PNG))

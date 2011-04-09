@@ -1,6 +1,3 @@
-# NOTE: this must be called with the rails script runner: 
-# i.e. ruby ../rails_website/script/runner parse.rb
-
 require 'rubygems'
 require 'hpricot'
 require 'json'

@@ -1,28 +1,34 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/tmp
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-pids
-dir
-
-cache
-dir
-
-sessions
-dir
-
-sockets
-dir
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/tmp"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   name="pids"
+   kind="dir"/>
+<entry
+   name="cache"
+   kind="dir"/>
+<entry
+   name="sessions"
+   kind="dir"/>
+<entry
+   name="sockets"
+   kind="dir"/>
+<entry
+   committed-rev="266"
+   name="info.html"
+   text-time="2008-09-17T16:31:55.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="3c106148482d915b9ccfb4b1f3e279dc"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+</wc-entries>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Phpinfo.us - Learn your PHP DNA : <%= controller.action_name %></title>
+
+  <%= stylesheet_link_tag 'default' %>
+	<%= javascript_include_tag  :defaults %>
+
+	<style>
+	.same {
+		font-weight: bold;
+	}
+	</style>
+		
+</head>
+<body>
+	<div class="box">
+		<h1><a href="/">Phpinfo.us</a></h1>
+		<h2>Learn your PHP DNA</h2>
+</div>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+class Phpinfo < Pconfig
+  
+end

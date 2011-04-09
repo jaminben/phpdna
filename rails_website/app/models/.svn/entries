@@ -1,76 +1,119 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/app/models
-file:///var/svn
-
-
-
-2008-06-30T18:26:30.970647Z
-238
-root
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-5201a03c-8392-4f5c-b0b8-8a94456bbd58
-
-medge.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-eedf6595e2727750133648ebd07fddc8
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-site.rb
-file
-
-
-
-
-2008-06-30T18:24:15.000000Z
-c4370b8a08258459aa87a71aa66e9e95
-2008-06-30T18:26:30.970647Z
-238
-root
-
-cattribute.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-b9e9c7dca123c834682e3c0b040da02a
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-cmodule.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-9309af9ca60929807c26e648f66c3957
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/app/models"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="262"
+   name="modname.rb"
+   text-time="2008-09-16T14:40:04.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="b1901a9fda14aba063c9dfa5d5755c22"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="277"
+   name="pattribute.rb"
+   text-time="2008-10-04T05:04:38.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="f8836a60149cfce753b6cbf123dca71b"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="278"
+   name="phpinfo.rb"
+   text-time="2008-10-02T19:30:59.000000Z"
+   committed-date="2008-10-04T05:13:10.713143Z"
+   checksum="d93c05e92a6f4fad5aef7b760193bdfd"
+   last-author="ben"
+   kind="file"
+   revision="278"/>
+<entry
+   committed-rev="288"
+   name="site.rb"
+   text-time="2008-10-04T20:34:37.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="c0e27ea688b6dedc12855307eaabe51a"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="277"
+   name="pmodule.rb"
+   text-time="2008-10-03T22:32:42.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="bf1d75a80277f2a9b0211b336e88006b"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="288"
+   name="pconfig.rb"
+   text-time="2008-10-04T20:30:16.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="6f96f784e7f8a71b9aa4c143378b6399"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="277"
+   name="pkey.rb"
+   text-time="2008-10-03T23:04:13.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="f0e67858032d805414a009457b868c82"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="277"
+   name="freq_man.rb"
+   text-time="2008-10-04T03:45:20.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="41ded20b8bd30f7bbe04a4a0362e3087"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="266"
+   name="compare_cache.rb"
+   text-time="2008-09-17T18:36:05.000000Z"
+   committed-date="2008-09-18T02:05:51.865563Z"
+   checksum="07bba7cd42decbd738bf9b25ff3c8f18"
+   last-author="ben"
+   kind="file"
+   revision="266"/>
+<entry
+   committed-rev="277"
+   name="compare_edge.rb"
+   text-time="2008-10-04T20:30:53.000000Z"
+   committed-date="2008-10-04T05:12:45.555312Z"
+   checksum="10eec49a9075b1fe86f1572494c09c75"
+   last-author="ben"
+   kind="file"
+   revision="277"/>
+<entry
+   committed-rev="288"
+   name="pconfig_flat.rb"
+   text-time="2008-10-04T20:24:48.000000Z"
+   committed-date="2008-10-04T20:49:11.048190Z"
+   checksum="6fa7dc2fdce7b226c88fbdd2709210e9"
+   last-author="ben"
+   kind="file"
+   revision="288"/>
+<entry
+   committed-rev="262"
+   name="pvalue.rb"
+   text-time="2008-09-16T14:42:26.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="a3ddc2022546fb4ad0b9ea513f4fb380"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

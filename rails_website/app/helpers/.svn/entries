@@ -1,28 +1,38 @@
-8
-
-dir
-259
-file:///var/svn/config/trunk/php/data_model/app/helpers
-file:///var/svn
-
-
-
-2008-06-16T15:54:25.030942Z
-204
-ben
-
-
-svn:special svn:externals svn:needs-lock
-
-application_helper.rb
-file
-
-
-
-
-2008-06-16T15:54:12.000000Z
-3a1f28b1e560cf597cd3f2a9afade628
-2008-06-16T15:54:25.030942Z
-204
-ben
-
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="262"
+   name=""
+   committed-date="2008-09-17T06:55:05.059225Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/phpinfo/app/helpers"
+   last-author="ben"
+   kind="dir"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="262"/>
+<entry
+   committed-rev="274"
+   name="browse_helper.rb"
+   text-time="2008-09-28T04:02:53.000000Z"
+   committed-date="2008-09-28T06:25:59.243890Z"
+   checksum="852e2a65168c4c9732da2871f789131c"
+   last-author="ben"
+   kind="file"
+   revision="274"/>
+<entry
+   committed-rev="262"
+   name="application_helper.rb"
+   text-time="2008-09-16T14:16:48.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="3a1f28b1e560cf597cd3f2a9afade628"
+   last-author="ben"
+   kind="file"/>
+<entry
+   committed-rev="262"
+   name="sites_helper.rb"
+   text-time="2008-09-16T14:26:36.000000Z"
+   committed-date="2008-09-17T06:55:05.059225Z"
+   checksum="70ae42dc5b6f7e797b13cd01cbc83f71"
+   last-author="ben"
+   kind="file"/>
+</wc-entries>

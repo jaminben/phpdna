@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="238"
+   name=""
+   committed-date="2008-06-30T18:26:30.970647Z"
+   url="svn+ssh://ben@home.be-n.com/var/svn/config/trunk/php/data_model/app/models"
+   last-author="root"
+   kind="dir"
+   uuid="5201a03c-8392-4f5c-b0b8-8a94456bbd58"
+   repos="svn+ssh://ben@home.be-n.com/var/svn"
+   revision="260"/>
+<entry
+   committed-rev="204"
+   name="medge.rb"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="eedf6595e2727750133648ebd07fddc8"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="238"
+   name="site.rb"
+   text-time="2008-06-30T19:52:30.000000Z"
+   committed-date="2008-06-30T18:26:30.970647Z"
+   checksum="c4370b8a08258459aa87a71aa66e9e95"
+   last-author="root"
+   kind="file"
+   prop-time="2008-06-30T19:52:30.000000Z"/>
+<entry
+   committed-rev="204"
+   name="cattribute.rb"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="b9e9c7dca123c834682e3c0b040da02a"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+<entry
+   committed-rev="204"
+   name="cmodule.rb"
+   text-time="2008-06-16T21:59:32.000000Z"
+   committed-date="2008-06-16T15:54:25.030942Z"
+   checksum="9309af9ca60929807c26e648f66c3957"
+   last-author="ben"
+   kind="file"
+   prop-time="2008-06-16T21:59:32.000000Z"/>
+</wc-entries>

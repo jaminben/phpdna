@@ -1,0 +1,52 @@
+<h1><%=@pmodule.name%></h1>
+
+<%
+def compare (a, b)
+	return -1 if a[0].class == Symbol
+	return 1  if b[0].class == Symbol
+	return b[1][:freq_mod] <=> a[1][:freq_mod] 
+end
+
+%>
+<h2>Module Keys</h2>
+<% FreqMan.db[@pmodule.modname_id].sort{|a,b| compare(a,b)  }.each do |r|
+	(k,v) = r
+	 
+	next if (k.class == Symbol)
+	pk = Pkey.find_by_id(k)
+
+%>
+			<div>
+			(<%="%.2f" % v[:freq_mod]%>) <%=link_to pk.pkey, :action=>:key,  :id=> k, :pmodule => params[:id] %> 
+
+			<br /> 
+			</div>
+	<%
+		end			
+	%>
+	
+
+<h2>Co-Occuring Modules</h2>
+<ul>
+<% @co.each do |row|%>
+	<li <%= (row[1] == params[:id] ? "class='same'" : "") %>><%=link_to row[0], :action=>:module, :id=> row[1] %> (<%=row[2]%>) --- [<%=row[3]%>]</li>	
+<%end%>
+</ul>
+
+
+
+
+
+
+<h2>Sites</h2>
+<ul>
+<% @sites.each do |s|%>
+	<li><a href="/phpinfo/<%=s.id%>"><%=s.site.host%></a></li>
+<%end %>
+</ul>
+
+<!-- 
+	need to show modules, often found with this module, that are not SUPER common?
+	i.e. less than some threshold.
+-->
+

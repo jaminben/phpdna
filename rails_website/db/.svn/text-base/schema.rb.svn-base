@@ -1,5 +1,5 @@
 # This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of ActiveRecord to incrementally modify your database, and
+# please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your database schema. If you need
@@ -9,103 +9,97 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 20081004201034) do
 
-  create_table "cattribute_edges", :force => true do |t|
-    t.string  "ky"
-    t.string  "val"
-    t.integer "in_site_id"
-    t.integer "out_site_id"
+  create_table "compare_caches", :force => true do |t|
+    t.integer "phpinfo_id", :limit => 11
+    t.text    "data"
   end
 
-  add_index "cattribute_edges", ["ky"], :name => "index_cattribute_edges_on_ky"
-  add_index "cattribute_edges", ["val"], :name => "index_cattribute_edges_on_val"
-  add_index "cattribute_edges", ["in_site_id"], :name => "index_cattribute_edges_on_in_site_id"
-  add_index "cattribute_edges", ["out_site_id"], :name => "index_cattribute_edges_on_out_site_id"
+  add_index "compare_caches", ["phpinfo_id"], :name => "index_compare_caches_on_phpinfo_id"
 
-  create_table "cattribute_sedges", :force => true do |t|
-    t.integer "out_site_mcount"
-    t.integer "in_site_mcount"
-    t.integer "common"
-    t.integer "in_site_id"
-    t.integer "out_site_id"
+  create_table "compare_edges", :force => true do |t|
+    t.integer "in_id",        :limit => 11
+    t.integer "out_id",       :limit => 11
+    t.float   "mods_jaccard"
+    t.float   "attr_jaccard"
+    t.text    "cache"
   end
 
-  add_index "cattribute_sedges", ["out_site_id"], :name => "index_cattribute_sedges_on_out_site_id"
-  add_index "cattribute_sedges", ["in_site_id"], :name => "index_cattribute_sedges_on_in_site_id"
+  add_index "compare_edges", ["in_id"], :name => "index_compare_edges_on_in_id"
+  add_index "compare_edges", ["out_id"], :name => "index_compare_edges_on_out_id"
+  add_index "compare_edges", ["mods_jaccard"], :name => "index_compare_edges_on_mods_jaccard"
+  add_index "compare_edges", ["attr_jaccard"], :name => "index_compare_edges_on_attr_jaccard"
 
-  create_table "cattributes", :force => true do |t|
+  create_table "modnames", :force => true do |t|
+    t.string "modname"
+  end
+
+  add_index "modnames", ["modname"], :name => "index_modnames_on_modname"
+
+  create_table "pattributes", :force => true do |t|
+    t.integer "pmodule_id",       :limit => 11
+    t.integer "pkey_id",          :limit => 11
+    t.integer "pvalue_id",        :limit => 11
+    t.integer "pvalue_master_id", :limit => 11
+  end
+
+  add_index "pattributes", ["pkey_id"], :name => "index_pattributes_on_pkey_id"
+  add_index "pattributes", ["pvalue_id"], :name => "index_pattributes_on_pvalue_id"
+  add_index "pattributes", ["pmodule_id"], :name => "index_pattributes_on_pmodule_id"
+  add_index "pattributes", ["pvalue_master_id"], :name => "index_pattributes_on_pvalue_master_id"
+
+  create_table "pconfig_flat", :force => true do |t|
+    t.integer "pconfig_id",       :limit => 11, :default => 0, :null => false
     t.string  "type"
-    t.string  "key"
-    t.string  "val"
-    t.integer "cmodule_id"
-    t.integer "site_id"
+    t.integer "site_id",          :limit => 11
+    t.integer "modname_id",       :limit => 11
+    t.integer "pkey_id",          :limit => 11
+    t.integer "pvalue_id",        :limit => 11
+    t.integer "pvalue_master_id", :limit => 11
   end
 
-  add_index "cattributes", ["cmodule_id"], :name => "index_cattributes_on_cmodule_id"
-  add_index "cattributes", ["site_id"], :name => "index_cattributes_on_site_id"
-  add_index "cattributes", ["key"], :name => "index_cattributes_on_key"
-  add_index "cattributes", ["val"], :name => "index_cattributes_on_val"
-
-  create_table "cmodules", :force => true do |t|
-    t.string  "name"
-    t.integer "site_id"
+  create_table "pconfigs", :force => true do |t|
+    t.integer  "site_id",      :limit => 11
+    t.text     "raw"
+    t.string   "local_copy"
+    t.string   "md5_hash"
+    t.string   "fingerprint"
+    t.datetime "last_checked"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "type"
+    t.boolean  "current",                    :default => true
   end
 
-  add_index "cmodules", ["name"], :name => "index_cmodules_on_name"
-  add_index "cmodules", ["site_id"], :name => "index_cmodules_on_site_id"
+  add_index "pconfigs", ["site_id"], :name => "index_phpinfos_on_site_id"
+  add_index "pconfigs", ["type"], :name => "index_pconfigs_on_type"
+  add_index "pconfigs", ["current"], :name => "index_pconfigs_on_current"
 
-  create_table "jaccard2", :id => false, :force => true do |t|
-    t.integer "in_site_id"
-    t.integer "out_site_id"
-    t.integer "common"
-    t.decimal "jaccard",         :precision => 18, :scale => 8
-    t.decimal "jaccard_common",  :precision => 14, :scale => 4
-    t.integer "in_site_mcount"
-    t.integer "out_site_mcount"
+  create_table "pkeys", :force => true do |t|
+    t.string "pkey"
   end
 
-  add_index "jaccard2", ["in_site_id"], :name => "in_site_id"
-  add_index "jaccard2", ["out_site_id"], :name => "out_site_id"
+  add_index "pkeys", ["pkey"], :name => "index_pkeys_on_pkey"
 
-  create_table "jaccard_medges", :id => false, :force => true do |t|
-    t.integer "in_site_id"
-    t.integer "out_site_id"
-    t.integer "common"
-    t.decimal "jaccard",         :precision => 18, :scale => 8
-    t.decimal "jaccard_common",  :precision => 14, :scale => 4
-    t.integer "in_site_mcount"
-    t.integer "out_site_mcount"
+  create_table "pmodules", :force => true do |t|
+    t.integer "pconfig_id", :limit => 11
+    t.integer "modname_id", :limit => 11
   end
 
-  create_table "medges", :force => true do |t|
-    t.integer "in_site_id"
-    t.integer "out_site_id"
-    t.string  "description"
-  end
+  add_index "pmodules", ["pconfig_id"], :name => "index_pmodules_on_phpinfo_id"
+  add_index "pmodules", ["modname_id"], :name => "index_pmodules_on_modname_id"
 
-  add_index "medges", ["in_site_id"], :name => "index_medges_on_in_site_id"
-  add_index "medges", ["out_site_id"], :name => "index_medges_on_out_site_id"
-  add_index "medges", ["description"], :name => "index_medges_on_description"
-
-  create_table "sedges", :force => true do |t|
-    t.integer "in_site_id"
-    t.integer "out_site_id"
-    t.integer "common"
-    t.float   "jaccard"
+  create_table "pvalues", :force => true do |t|
+    t.text "pvalue"
   end
 
   create_table "sites", :force => true do |t|
-    t.string  "url"
-    t.string  "query"
-    t.string  "path"
-    t.integer "m_count"
-  end
-
-  create_table "smedges", :force => true do |t|
-    t.integer "in_site_id"
-    t.integer "out_site_id"
-    t.integer "common"
+    t.string   "url"
+    t.string   "ip_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "host"
   end
 
 end

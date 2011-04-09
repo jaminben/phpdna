@@ -1,0 +1,74 @@
+<!--
+	We view a distribution of a key.
+	[row['count'], row['pmodule'], row['pkey'], row['pvalue'] ]
+-->
+<style>
+.both {
+	background:pink;
+}
+.me {
+	background:cyan;
+}
+.you {
+	background:blue;
+}
+</style>
+
+<% 
+	#(@attr, @total)
+
+	p1val = nil
+	p2val = nil
+	if(@php1)
+		print @attr.first[1], @attr.first[2]
+		p1val = @php1.get_attr(@attr.first[1], @attr.first[2])
+		p1val = p1val.value if(p1val)
+		print p1val
+	end
+	
+	
+	if(@php2)
+		p2val = @php2.get_attr(@attr.first[1], @attr.first[2])
+		p2val = p2val.value if(p2val)
+	end
+	
+	%><h1><%=@attr.first[2]%></h1><%
+	@attr.each do |count, mod, key, val|
+		count /= @total
+		_class = ""
+		
+	
+		if(p1val == val and p2val == val)
+			_class = "both"
+		elsif(p1val == val)
+			_class = "me"
+		elsif(p2val == val)
+			_class = "you"
+		end
+		
+		
+		%>
+		<div class="<%=_class%>">
+		(<%=count%>) <%=val%> 
+		
+		<%
+		if(p1val == val and val)
+		%>
+			--<%=@php1.id%>----------
+		<%	
+		end
+		if(p2val == val and val)
+		%>
+			--<%=@php2.id%>-----------
+		<%	
+		end
+		%>
+		<br /> 
+		</div>
+<%
+	end			
+%>
+	
+
+	
+		
