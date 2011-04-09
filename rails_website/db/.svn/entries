@@ -1,0 +1,56 @@
+8
+
+dir
+259
+file:///var/svn/config/trunk/php/data_model/db
+file:///var/svn
+
+
+
+2008-07-18T05:26:43.897891Z
+249
+ben
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5201a03c-8392-4f5c-b0b8-8a94456bbd58
+
+schema.rb
+file
+
+
+
+
+2008-08-27T22:27:01.000000Z
+7280e011371c29181b385509c86e37df
+2008-07-18T05:26:43.897891Z
+249
+ben
+
+development.sqlite3
+file
+
+
+
+
+2008-07-17T05:47:21.000000Z
+6041318ffc22db9c43b824e8187c3626
+2008-07-17T05:46:00.318242Z
+245
+ben
+has-props
+
+migrate
+dir
+

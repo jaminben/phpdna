@@ -1,0 +1,331 @@
+# Logfile created on Mon Jun 16 12:02:33 -0400 2008  [4;36;1mSQL (0.000138)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.008909)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000068)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000045)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000044)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000043)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateSedges (5)
+  [4;36;1mSQL (0.314100)[0m   [0;1mCREATE TABLE `sedges` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `in_site_id` int(11) DEFAULT NULL, `out_site_id` int(11) DEFAULT NULL, `common` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.008734)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.000230)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000262)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.006953)[0m   [0;1mSHOW FIELDS FROM `cattributes`[0m
+  [4;35;1mSQL (0.000841)[0m   [0mdescribe `cattributes`[0m
+  [4;36;1mSQL (0.555837)[0m   [0;1mSHOW KEYS FROM `cattributes`[0m
+  [4;35;1mSQL (0.000661)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.000726)[0m   [0;1mdescribe `cmodules`[0m
+  [4;35;1mSQL (0.171328)[0m   [0mSHOW KEYS FROM `cmodules`[0m
+  [4;36;1mSQL (0.001320)[0m   [0;1mSHOW FIELDS FROM `medges`[0m
+  [4;35;1mSQL (0.001449)[0m   [0mdescribe `medges`[0m
+  [4;36;1mSQL (0.338708)[0m   [0;1mSHOW KEYS FROM `medges`[0m
+  [4;35;1mSQL (0.001870)[0m   [0mSHOW FIELDS FROM `sedges`[0m
+  [4;36;1mSQL (0.002597)[0m   [0;1mdescribe `sedges`[0m
+  [4;35;1mSQL (0.001153)[0m   [0mSHOW KEYS FROM `sedges`[0m
+  [4;36;1mSQL (0.001274)[0m   [0;1mSHOW FIELDS FROM `sites`[0m
+  [4;35;1mSQL (0.001573)[0m   [0mdescribe `sites`[0m
+  [4;36;1mSQL (0.073236)[0m   [0;1mSHOW KEYS FROM `sites`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCmodule Load (0.431368)[0m   [0mSELECT * FROM `cmodules` [0m
+  [4;36;1mCmodule Columns (0.000711)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.000110)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCmodule Load (0.124054)[0m   [0mSELECT * FROM `cmodules` [0m
+  [4;36;1mCmodule Columns (0.000663)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.087130)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCmodule Load (2.842374)[0m   [0mSELECT * FROM `cmodules` [0m
+  [4;36;1mCmodule Columns (0.261003)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.015935)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCmodule Load (2.759072)[0m   [0mSELECT * FROM `cmodules` [0m
+  [4;36;1mCmodule Columns (0.229940)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.018181)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000081)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000056)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000053)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000053)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000052)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateSmedges (6)
+  [4;35;1mSQL (0.361103)[0m   [0mCREATE TABLE `smedges` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `in_site_id` int(11) DEFAULT NULL, `out_site_id` int(11) DEFAULT NULL, `common` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.036339)[0m   [0;1mUPDATE schema_info SET version = 6[0m
+  [4;35;1mSQL (0.009047)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000299)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.064779)[0m   [0mSHOW FIELDS FROM `cattributes`[0m
+  [4;36;1mSQL (0.000861)[0m   [0;1mdescribe `cattributes`[0m
+  [4;35;1mSQL (0.573575)[0m   [0mSHOW KEYS FROM `cattributes`[0m
+  [4;36;1mSQL (0.010493)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;35;1mSQL (0.001384)[0m   [0mdescribe `cmodules`[0m
+  [4;36;1mSQL (0.169820)[0m   [0;1mSHOW KEYS FROM `cmodules`[0m
+  [4;35;1mSQL (0.016976)[0m   [0mSHOW FIELDS FROM `medges`[0m
+  [4;36;1mSQL (0.001465)[0m   [0;1mdescribe `medges`[0m
+  [4;35;1mSQL (0.361900)[0m   [0mSHOW KEYS FROM `medges`[0m
+  [4;36;1mSQL (0.001287)[0m   [0;1mSHOW FIELDS FROM `sedges`[0m
+  [4;35;1mSQL (0.001427)[0m   [0mdescribe `sedges`[0m
+  [4;36;1mSQL (0.178053)[0m   [0;1mSHOW KEYS FROM `sedges`[0m
+  [4;35;1mSQL (0.001283)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSQL (0.001439)[0m   [0;1mdescribe `sites`[0m
+  [4;35;1mSQL (0.050574)[0m   [0mSHOW KEYS FROM `sites`[0m
+  [4;36;1mSQL (0.001456)[0m   [0;1mSHOW FIELDS FROM `smedges`[0m
+  [4;35;1mSQL (0.001428)[0m   [0mdescribe `smedges`[0m
+  [4;36;1mSQL (0.000849)[0m   [0;1mSHOW KEYS FROM `smedges`[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000057)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000050)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000048)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000048)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000048)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000048)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddNewWeightToSedges (7)
+  [4;36;1mSQL (315.248320)[0m   [0;1mALTER TABLE `sedges` ADD `jaccard` float[0m
+  [4;35;1mSQL (0.034292)[0m   [0mUPDATE schema_info SET version = 7[0m
+  [4;36;1mSQL (0.000247)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000312)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.019256)[0m   [0;1mSHOW FIELDS FROM `cattributes`[0m
+  [4;35;1mSQL (0.000929)[0m   [0mdescribe `cattributes`[0m
+  [4;36;1mSQL (0.735125)[0m   [0;1mSHOW KEYS FROM `cattributes`[0m
+  [4;35;1mSQL (0.000737)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.000784)[0m   [0;1mdescribe `cmodules`[0m
+  [4;35;1mSQL (0.189321)[0m   [0mSHOW KEYS FROM `cmodules`[0m
+  [4;36;1mSQL (0.000727)[0m   [0;1mSHOW FIELDS FROM `medges`[0m
+  [4;35;1mSQL (0.000816)[0m   [0mdescribe `medges`[0m
+  [4;36;1mSQL (0.366235)[0m   [0;1mSHOW KEYS FROM `medges`[0m
+  [4;35;1mSQL (0.018096)[0m   [0mSHOW FIELDS FROM `sedges`[0m
+  [4;36;1mSQL (0.001527)[0m   [0;1mdescribe `sedges`[0m
+  [4;35;1mSQL (0.095201)[0m   [0mSHOW KEYS FROM `sedges`[0m
+  [4;36;1mSQL (0.001351)[0m   [0;1mSHOW FIELDS FROM `sites`[0m
+  [4;35;1mSQL (0.001681)[0m   [0mdescribe `sites`[0m
+  [4;36;1mSQL (0.076597)[0m   [0;1mSHOW KEYS FROM `sites`[0m
+  [4;35;1mSQL (0.001271)[0m   [0mSHOW FIELDS FROM `smedges`[0m
+  [4;36;1mSQL (0.001423)[0m   [0;1mdescribe `smedges`[0m
+  [4;35;1mSQL (0.022666)[0m   [0mSHOW KEYS FROM `smedges`[0m
+  [4;36;1mSQL (0.000115)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.000223)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000041)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000036)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000035)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000033)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000033)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000032)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000032)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddModuleCountToSites (8)
+  [4;35;1mSQL (0.424705)[0m   [0mALTER TABLE `sites` ADD `m_count` int(11)[0m
+  [4;36;1mSQL (0.000242)[0m   [0;1mUPDATE schema_info SET version = 8[0m
+  [4;35;1mSQL (0.000230)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000275)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000717)[0m   [0mSHOW FIELDS FROM `cattributes`[0m
+  [4;36;1mSQL (0.000507)[0m   [0;1mdescribe `cattributes`[0m
+  [4;35;1mSQL (0.374417)[0m   [0mSHOW KEYS FROM `cattributes`[0m
+  [4;36;1mSQL (0.000554)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;35;1mSQL (0.000387)[0m   [0mdescribe `cmodules`[0m
+  [4;36;1mSQL (0.104119)[0m   [0;1mSHOW KEYS FROM `cmodules`[0m
+  [4;35;1mSQL (0.000575)[0m   [0mSHOW FIELDS FROM `medges`[0m
+  [4;36;1mSQL (0.000425)[0m   [0;1mdescribe `medges`[0m
+  [4;35;1mSQL (0.190241)[0m   [0mSHOW KEYS FROM `medges`[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mSHOW FIELDS FROM `sedges`[0m
+  [4;35;1mSQL (0.000449)[0m   [0mdescribe `sedges`[0m
+  [4;36;1mSQL (0.039713)[0m   [0;1mSHOW KEYS FROM `sedges`[0m
+  [4;35;1mSQL (0.000673)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSQL (0.000475)[0m   [0;1mdescribe `sites`[0m
+  [4;35;1mSQL (0.000229)[0m   [0mSHOW KEYS FROM `sites`[0m
+  [4;36;1mSQL (0.000440)[0m   [0;1mSHOW FIELDS FROM `smedges`[0m
+  [4;35;1mSQL (0.000421)[0m   [0mdescribe `smedges`[0m
+  [4;36;1mSQL (0.000163)[0m   [0;1mSHOW KEYS FROM `smedges`[0m
+  [4;36;1mSQL (0.130752)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.498237)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.481501)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '445') LIMIT 1[0m
+  [4;35;1mSite Load (0.055694)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '3107') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.193862)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 445) [0m
+  [4;35;1mCmodule Load (0.189206)[0m   [0mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 3107) [0m
+  [4;36;1mCmodule Columns (0.030267)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.002656)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.028643)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.022930)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '1217') LIMIT 1[0m
+  [4;35;1mSite Load (0.000093)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '3107') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.156683)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 1217) [0m
+  [4;35;1mCmodule Columns (0.011951)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.000130)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 3107) [0m
+  [4;36;1mSQL (0.000141)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000966)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000132)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '1217') LIMIT 1[0m
+  [4;35;1mSite Load (0.000109)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '3107') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.000093)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 1217) [0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000698)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.023394)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '143') LIMIT 1[0m
+  [4;35;1mSite Load (0.040357)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '850') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.173827)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 143) [0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000946)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000133)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '143') LIMIT 1[0m
+  [4;35;1mSite Load (0.000102)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '850') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.000095)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 143) [0m
+  [4;35;1mCmodule Columns (0.001261)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.323211)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 850) [0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.015432)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000108)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '143') LIMIT 1[0m
+  [4;35;1mSite Load (0.000077)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '850') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.000082)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 143) [0m
+  [4;35;1mCmodule Columns (0.000497)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.000119)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 850) [0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000905)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000122)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '143') LIMIT 1[0m
+  [4;35;1mSite Load (0.000095)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '850') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.000092)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 143) [0m
+  [4;35;1mCmodule Columns (0.000797)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.000136)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 850) [0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000800)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000324)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '4048') LIMIT 1[0m
+  [4;35;1mSite Load (0.000149)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '4080') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.187376)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 4048) [0m
+  [4;35;1mCmodule Columns (0.000597)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.041421)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 4080) [0m
+  [4;36;1mSQL (0.000146)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000923)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000121)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '4048') LIMIT 1[0m
+  [4;35;1mSite Load (0.000096)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '4080') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.000076)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 4048) [0m
+  [4;35;1mCmodule Columns (0.000761)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.000121)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 4080) [0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000923)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000125)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '4048') LIMIT 1[0m
+  [4;35;1mSite Load (0.000343)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '3915') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.000076)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 4048) [0m
+  [4;35;1mCmodule Columns (0.000769)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.050987)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 3915) [0m
+  [4;36;1mSQL (0.000148)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000905)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000325)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '40') LIMIT 1[0m
+  [4;35;1mSite Load (0.000295)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '80') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.031140)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 40) [0m
+  [4;35;1mCmodule Columns (0.000805)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.052798)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 80) [0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000919)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000336)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '3228') LIMIT 1[0m
+  [4;35;1mSite Load (0.000319)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '3256') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.102179)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 3228) [0m
+  [4;35;1mCmodule Columns (0.000777)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.125814)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 3256) [0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSite Columns (0.000905)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSite Load (0.000377)[0m   [0;1mSELECT * FROM `sites` WHERE (`sites`.`id` = '2696') LIMIT 1[0m
+  [4;35;1mSite Load (0.000166)[0m   [0mSELECT * FROM `sites` WHERE (`sites`.`id` = '2964') LIMIT 1[0m
+  [4;36;1mCmodule Load (0.063940)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 2696) [0m
+  [4;35;1mCmodule Columns (0.000605)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mCmodule Load (0.015908)[0m   [0;1mSELECT * FROM `cmodules` WHERE (cmodules.site_id = 2964) [0m
+  [4;36;1mSQL (0.000113)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.021514)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000074)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000050)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000048)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000058)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000049)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000048)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000048)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000048)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000047)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateAttrEdges (10)
+  [4;35;1mSQL (0.149748)[0m   [0mCREATE TABLE `cattribute_edges` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `ky` varchar(255) DEFAULT NULL, `val` varchar(255) DEFAULT NULL, `in_site_id` int(11) DEFAULT NULL, `out_site_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.039481)[0m   [0;1mCREATE TABLE `cattribute_sedges` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `out_site_mcount` int(11) DEFAULT NULL, `in_site_mcount` int(11) DEFAULT NULL, `common` int(11) DEFAULT NULL, `in_site_id` int(11) DEFAULT NULL, `out_site_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.004564)[0m   [0mCREATE INDEX `index_cattribute_edges_on_ky` ON `cattribute_edges` (`ky`)[0m
+  [4;36;1mSQL (0.037952)[0m   [0;1mCREATE INDEX `index_cattribute_edges_on_val` ON `cattribute_edges` (`val`)[0m
+  [4;35;1mSQL (0.004702)[0m   [0mCREATE INDEX `index_cattribute_edges_on_in_site_id` ON `cattribute_edges` (`in_site_id`)[0m
+  [4;36;1mSQL (0.014135)[0m   [0;1mCREATE INDEX `index_cattribute_edges_on_out_site_id` ON `cattribute_edges` (`out_site_id`)[0m
+  [4;35;1mSQL (0.004301)[0m   [0mCREATE INDEX `index_cattribute_sedges_on_out_site_id` ON `cattribute_sedges` (`out_site_id`)[0m
+  [4;36;1mSQL (0.004896)[0m   [0;1mCREATE INDEX `index_cattribute_sedges_on_in_site_id` ON `cattribute_sedges` (`in_site_id`)[0m
+  [4;35;1mSQL (0.025188)[0m   [0mUPDATE schema_info SET version = 10[0m
+  [4;36;1mSQL (0.000239)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000320)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000924)[0m   [0;1mSHOW FIELDS FROM `cattribute_edges`[0m
+  [4;35;1mSQL (0.000836)[0m   [0mdescribe `cattribute_edges`[0m
+  [4;36;1mSQL (0.000427)[0m   [0;1mSHOW KEYS FROM `cattribute_edges`[0m
+  [4;35;1mSQL (0.000940)[0m   [0mSHOW FIELDS FROM `cattribute_sedges`[0m
+  [4;36;1mSQL (0.000826)[0m   [0;1mdescribe `cattribute_sedges`[0m
+  [4;35;1mSQL (0.000366)[0m   [0mSHOW KEYS FROM `cattribute_sedges`[0m
+  [4;36;1mSQL (0.000720)[0m   [0;1mSHOW FIELDS FROM `cattributes`[0m
+  [4;35;1mSQL (0.000834)[0m   [0mdescribe `cattributes`[0m
+  [4;36;1mSQL (0.580207)[0m   [0;1mSHOW KEYS FROM `cattributes`[0m
+  [4;35;1mSQL (0.000784)[0m   [0mSHOW FIELDS FROM `cmodules`[0m
+  [4;36;1mSQL (0.000727)[0m   [0;1mdescribe `cmodules`[0m
+  [4;35;1mSQL (0.171420)[0m   [0mSHOW KEYS FROM `cmodules`[0m
+  [4;36;1mSQL (0.001543)[0m   [0;1mSHOW FIELDS FROM `jaccard2`[0m
+  [4;35;1mSQL (0.001711)[0m   [0mdescribe `jaccard2`[0m
+  [4;36;1mSQL (0.000873)[0m   [0;1mSHOW KEYS FROM `jaccard2`[0m
+  [4;35;1mSQL (0.001463)[0m   [0mSHOW FIELDS FROM `jaccard_medges`[0m
+  [4;36;1mSQL (0.001723)[0m   [0;1mdescribe `jaccard_medges`[0m
+  [4;35;1mSQL (0.000811)[0m   [0mSHOW KEYS FROM `jaccard_medges`[0m
+  [4;36;1mSQL (0.001230)[0m   [0;1mSHOW FIELDS FROM `medges`[0m
+  [4;35;1mSQL (0.088772)[0m   [0mdescribe `medges`[0m
+  [4;36;1mSQL (1.306006)[0m   [0;1mSHOW KEYS FROM `medges`[0m
+  [4;35;1mSQL (0.001335)[0m   [0mSHOW FIELDS FROM `sedges`[0m
+  [4;36;1mSQL (0.001012)[0m   [0;1mdescribe `sedges`[0m
+  [4;35;1mSQL (0.239798)[0m   [0mSHOW KEYS FROM `sedges`[0m
+  [4;36;1mSQL (0.001470)[0m   [0;1mSHOW FIELDS FROM `sites`[0m
+  [4;35;1mSQL (0.001657)[0m   [0mdescribe `sites`[0m
+  [4;36;1mSQL (0.001046)[0m   [0;1mSHOW KEYS FROM `sites`[0m
+  [4;35;1mSQL (0.001316)[0m   [0mSHOW FIELDS FROM `smedges`[0m
+  [4;36;1mSQL (0.001546)[0m   [0;1mdescribe `smedges`[0m
+  [4;35;1mSQL (0.000940)[0m   [0mSHOW KEYS FROM `smedges`[0m
+  [4;36;1mSQL (0.161555)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.540501)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.146655)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000124)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000095)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000092)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000088)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000103)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000089)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000088)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000090)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000088)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddMysam (11)
+  [4;36;1mSQL (1.208239)[0m   [0;1mALTER TABLE cattribute_sedges ENGINE=MyISAM[0m
+  [4;35;1mSQL (9.157832)[0m   [0mALTER TABLE cattribute_edges ENGINE=MyISAM[0m
+  [4;36;1mSQL (0.015795)[0m   [0;1mUPDATE schema_info SET version = 11[0m
+  [4;35;1mSQL (0.016981)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.044461)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.071890)[0m   [0mSHOW FIELDS FROM `cattribute_edges`[0m
+  [4;36;1mSQL (0.000850)[0m   [0;1mdescribe `cattribute_edges`[0m
+  [4;35;1mSQL (0.000488)[0m   [0mSHOW KEYS FROM `cattribute_edges`[0m
+  [4;36;1mSQL (0.004422)[0m   [0;1mSHOW FIELDS FROM `cattribute_sedges`[0m
+  [4;35;1mSQL (0.000832)[0m   [0mdescribe `cattribute_sedges`[0m
+  [4;36;1mSQL (0.000441)[0m   [0;1mSHOW KEYS FROM `cattribute_sedges`[0m
+  [4;35;1mSQL (0.046415)[0m   [0mSHOW FIELDS FROM `cattributes`[0m
+  [4;36;1mSQL (0.000856)[0m   [0;1mdescribe `cattributes`[0m
+  [4;35;1mSQL (0.706478)[0m   [0mSHOW KEYS FROM `cattributes`[0m
+  [4;36;1mSQL (0.008486)[0m   [0;1mSHOW FIELDS FROM `cmodules`[0m
+  [4;35;1mSQL (0.001431)[0m   [0mdescribe `cmodules`[0m
+  [4;36;1mSQL (0.221556)[0m   [0;1mSHOW KEYS FROM `cmodules`[0m
+  [4;35;1mSQL (0.026330)[0m   [0mSHOW FIELDS FROM `jaccard2`[0m
+  [4;36;1mSQL (0.001760)[0m   [0;1mdescribe `jaccard2`[0m
+  [4;35;1mSQL (0.000849)[0m   [0mSHOW KEYS FROM `jaccard2`[0m
+  [4;36;1mSQL (0.060427)[0m   [0;1mSHOW FIELDS FROM `jaccard_medges`[0m
+  [4;35;1mSQL (0.001733)[0m   [0mdescribe `jaccard_medges`[0m
+  [4;36;1mSQL (0.000813)[0m   [0;1mSHOW KEYS FROM `jaccard_medges`[0m
+  [4;35;1mSQL (0.059797)[0m   [0mSHOW FIELDS FROM `medges`[0m
+  [4;36;1mSQL (0.091235)[0m   [0;1mdescribe `medges`[0m
+  [4;35;1mSQL (1.428822)[0m   [0mSHOW KEYS FROM `medges`[0m
+  [4;36;1mSQL (0.038121)[0m   [0;1mSHOW FIELDS FROM `sedges`[0m
+  [4;35;1mSQL (0.001618)[0m   [0mdescribe `sedges`[0m
+  [4;36;1mSQL (0.201653)[0m   [0;1mSHOW KEYS FROM `sedges`[0m
+  [4;35;1mSQL (0.013612)[0m   [0mSHOW FIELDS FROM `sites`[0m
+  [4;36;1mSQL (0.001580)[0m   [0;1mdescribe `sites`[0m
+  [4;35;1mSQL (0.064550)[0m   [0mSHOW KEYS FROM `sites`[0m
+  [4;36;1mSQL (0.027161)[0m   [0;1mSHOW FIELDS FROM `smedges`[0m
+  [4;35;1mSQL (0.001497)[0m   [0mdescribe `smedges`[0m
+  [4;36;1mSQL (0.016864)[0m   [0;1mSHOW KEYS FROM `smedges`[0m

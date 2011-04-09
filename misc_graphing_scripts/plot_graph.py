@@ -1,0 +1,77 @@
+import os 
+import igraph
+from igraph import Graph
+print igraph
+
+INFILE      = "output/small_jacc_90.net" 
+OUTFILE_SVG = "out_jax_smaller_90.svg"
+OUTFILE_PNG = "out_jac_90.png"
+
+#g = Graph.Load("output/SimpleModuleGraphALL.net")
+g = Graph.Load(INFILE)
+#g = igraph.load("output/SimpleModuleGraph.net")
+
+#print g.es
+#print g.es["weight"]
+#print g.cliques()
+
+# delete edges that have low weight
+#for e in g.es:
+#  print e
+#  if(e['weight'] < 0.85):
+#    g.delete_edges(e)
+
+
+#simple test:
+#print g.vs[1]
+#g = g.delete_vertices(g.vs[1])
+#print g.vs[1]
+
+#v =  g.vs[1]
+#g.delete_vertices(v.index)
+#print v
+#print g.vs[1]
+
+#exit()
+
+#removed = []
+#print len(g.vs)
+g.simplify()
+#for v in g.vs:
+#  if g.degree(v) == 0:
+    #g.delete_vertices(v.index)
+#    if(v['id']):
+#    removed.append(v.index)
+
+#g.delete_vertices(removed)
+    
+  #elif g.degree(v) == 1:
+    #print v
+    #ed  = g.es[ g.adjacent(v.index)[0] ]
+    #print g.vs[ed.source]
+    #print g.vs[ed.target]
+    #print "\n" 
+#  elif(g.degree(v) == 1):
+#    print g.degree(v)
+
+
+#print g.decompose(minelements=2)
+
+print len(g.vs)
+
+g1 = g.subgraph(g.vs.select(_degree_gt=0))
+
+print len(g1.vs)
+
+
+#for i in g1.vs:
+#  if( i['id'] in ded):
+#    print "WTF"
+#    print i
+
+#l = g.layout(layout='kk')
+l = g1.layout(layout='fruchterman_reingold', weights='weight', maxdelta=10000, maxiter=500)
+g1.write_svg(OUTFILE_SVG, l, width=2048, height = 2048, vertex_size=5, font_size=12, labels='id' )
+os.system("rsvg-convert %s -o %s" %(OUTFILE_SVG, OUTFILE_PNG))
+os.system("open %s" % (OUTFILE_PNG))
+
